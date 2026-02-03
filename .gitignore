@@ -1,0 +1,8 @@
+# すべて無視
+*
+
+# 管理するファイルのみ許可
+!.gitignore
+!uexec.sh
+!uexec.conf.example
+!README.md

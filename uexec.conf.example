@@ -1,0 +1,27 @@
+# Universal Exec Configuration
+# フォーマット: "exec_type:repo_path:service_name[:container_name][:use_compose][:remote_user]"
+# 
+# exec_type:
+#   - devcontainer: devcontainer CLIで起動
+#   - container: 既存コンテナに接続
+#   - local: ローカル実行
+#
+# remote_userを省略した場合はホストと同じユーザー名を使用
+
+# Devcontainer examples
+TARGETS["myproject/web"]="devcontainer:myproject:web:::debian"
+TARGETS["another/api"]="devcontainer:another:api:::appuser"
+
+# Local execution examples
+TARGETS["localproject"]="local:localproject"
+TARGETS["scripts"]="local:scripts"
+
+# Container examples (既存コンテナに接続)
+# TARGETS["running/service"]="container:running:service"
+
+# Docker Compose examples
+# TARGETS["compose/app"]="container:compose:app::compose"
+
+# Container with explicit name
+# TARGETS["special/app"]="container:special:app:my_container_name"
+
